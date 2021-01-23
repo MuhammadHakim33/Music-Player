@@ -101,7 +101,7 @@ function laguEmpat() {
   thumb.setAttribute("src", "img/vacation.jpg");
   judul.innerHTML = "vacation";
   artis.innerHTML = "GFRIEND";
-  sound.setAttribute("src", "song/vacation.mp3");
+  sound.setAttribute("src", "song/Vacation.mp3");
 
   btnPlayPause.addEventListener('click', playPause);
   btnClose.addEventListener('click', close);
