@@ -31,6 +31,19 @@ export class Song
     {
         this.audio.addEventListener('timeupdate', () => {
             this.currentTimeNote = Math.round(this.audio.currentTime);
+            this.duration();
         })
+    }
+
+    // Define Second & Minute Current Time Audio
+    duration()
+    {
+        let min = Math.floor(this.currentTimeNote / 60);
+        let sec = this.currentTimeNote % 60;
+
+        min = min < 10 ? "0" + min : min;
+        sec = sec < 10 ? "0" + sec : sec;
+
+        document.querySelector('.song-duration').textContent = `${min}:${sec}`;
     }
 }
