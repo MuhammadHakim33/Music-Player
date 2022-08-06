@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <title>Music Player</title>
 </head>
@@ -20,9 +21,31 @@
                 </tr>
             </thead>
             <tbody class="song-list">
-                
+                <!-- In Js -->
             </tbody>
         </table>
+    </div>
+
+    <!-- Modal Player for music -->
+    <div class="modal fade" id="modal-music-player" data-bs-backdrop="static" tabindex="-1" aria-labelledby="modal-music-playerLabel" aria-hidden="true">
+        <div class="modal-dialog" style="max-width: 600px">
+            <div class="modal-content rounded-0">
+                <div class="modal-body d-flex justify-content-between align-items-center">
+                    <div class="wrapper" style="width: 200px">
+                        <h6 class="song-title mb-0">Title Song</h6>
+                        <p class="song-artist mb-0">Artist</p>
+                    </div>
+                    <div class="wrapper flex-grow-1 mx-4">
+                        <audio class="song-mp3"src=""></audio>
+                        <input class="song-time-bar w-100" type="range" value="0" min="0" class="range">
+                    </div>
+                    <div class="wrapper">
+                        <button class="play-pause-song"><i class="ri-play-fill"></i></button>
+                        <button data-bs-dismiss="modal" class="close-player"><i class="ri-close-fill"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
 
