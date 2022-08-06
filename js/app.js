@@ -1,6 +1,9 @@
 import { songs } from './listsongs.js';
 import { Song } from './Song.js';
 
+let classSong = null;
+let audio = false;
+
 // Display List Songs
 document.addEventListener('DOMContentLoaded', () => {
     songs.forEach((song) => {
@@ -24,17 +27,45 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 // Event : Open Player
-document.querySelector('.song-list').addEventListener('click', (e) => {
+document.querySelector('.song-list')
+        .addEventListener('click', (e) => {
 
-    const result = songs.filter((song) => 
-        song.title == e.target.previousElementSibling.previousElementSibling.textContent
-    )[0];
+            const result = songs.filter((item) => 
+                item.title == e.target.previousElementSibling.previousElementSibling.textContent
+            )[0];
 
-    document.querySelector('.song-title').textContent = result.title;
-    document.querySelector('.song-artist').textContent = result.artist;
+            document.querySelector('.song-title').textContent = result.title;
+            document.querySelector('.song-artist').textContent = result.artist;
+
+            classSong = new Song(result.title, result.artist, result.thumbnail, result.mp3);
+
+            classSong.play();
+
+            classSong.updateTime(classSong.audio);
 
 })
 
-document.querySelector('.close-player').addEventListener('click', () => {
-    
-});
+
+// Event : Pause - Play Audio
+document.querySelector('.play-pause-btn')
+        .addEventListener('click', () => {
+
+            if(audio == false) {
+                audio = true;
+                classSong.pause()
+            } else {
+                audio = false;
+                classSong.play();
+            }
+})
+
+
+// Event : Close Player
+document.querySelector('.close-player-btn')
+        .addEventListener('click', () => classSong.pause());
+
+
+
+
+
+

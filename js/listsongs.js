@@ -22,5 +22,11 @@ export let songs = [
         artist: "GFRIEND",
         thumbnail: "cover/vacation.jpg",
         mp3: "songs/vacation.mp3"
-    }
+    },
+    {
+        title: "Perfect",
+        artist: "Ali Gatie",
+        thumbnail: "cover/vacation.jpg",
+        mp3: "songs/Perfect.mp3"
+    },
 ]
