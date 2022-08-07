@@ -40,9 +40,6 @@ document.querySelector('.song-list')
             classSong = new Song(result.title, result.artist, result.thumbnail, result.mp3);
 
             classSong.play();
-
-            classSong.updateTime(classSong.audio);
-
 })
 
 
@@ -63,6 +60,11 @@ document.querySelector('.play-pause-btn')
 // Event : Close Player
 document.querySelector('.close-player-btn')
         .addEventListener('click', () => classSong.pause());
+
+        
+// Event : Change Duration
+document.querySelector('.song-duration-bar')
+        .addEventListener('change', () => classSong.changeDuration());
 
 
 

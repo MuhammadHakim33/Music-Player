@@ -29,4 +29,10 @@ export let songs = [
         thumbnail: "cover/vacation.jpg",
         mp3: "songs/Perfect.mp3"
     },
+    {
+        title: "Only",
+        artist: "Lee Hi",
+        thumbnail: "cover/vacation.jpg",
+        mp3: "songs/Only.mp3"
+    },
 ]
