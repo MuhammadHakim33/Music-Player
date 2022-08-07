@@ -1,38 +1,32 @@
 export let songs = [
     {
-        title: "Feel Something",
-        artist: "Galantis ft. flyckt",
-        thumbnail: "cover/feelsomething.jpg",
-        mp3: "songs/FeelSomething.mp3"
-    },
-    {
-        title: "These Height",
-        artist: "Lucas & Steve, Bassjackers Feat.Caroline Pennell",
-        thumbnail: "cover/TheseHeights.jpg",
-        mp3: "songs/TheseHeights.mp3"
-    },
-    {
-        title: "Hey Kids",
-        artist: "THE ORAL CIGARETTES",
-        thumbnail: "cover/heykids.jpg",
-        mp3: "songs/heykids.mp3"
-    },
-    {
-        title: "Vacation",
-        artist: "GFRIEND",
-        thumbnail: "cover/vacation.jpg",
-        mp3: "songs/vacation.mp3"
+        title: "All 4 Nothing",
+        artist: "Lauv",
+        thumbnail: "cover/All4Nothing.jpg",
+        mp3: "songs/All4Nothing.mp3"
     },
     {
         title: "Perfect",
         artist: "Ali Gatie",
-        thumbnail: "cover/vacation.jpg",
+        thumbnail: "cover/perfect.jpg",
         mp3: "songs/Perfect.mp3"
     },
     {
         title: "Only",
         artist: "Lee Hi",
-        thumbnail: "cover/vacation.jpg",
+        thumbnail: "cover/Only.png",
         mp3: "songs/Only.mp3"
+    },
+    {
+        title: "It's You",
+        artist: "Sezari",
+        thumbnail: "cover/itsyou.png",
+        mp3: "songs/itsyou.mp3"
+    },
+    {
+        title: "Nothing's Gonna Change My Love for You",
+        artist: "George Benson",
+        thumbnail: "cover/NothingsGonnaChangeMyLoveforYou.jpg",
+        mp3: "songs/NothingsGonnaChangeMyLoveforYou.mp3"
     },
 ]
