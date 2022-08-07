@@ -7,7 +7,7 @@ export class Song
         this.thumbnail = thumbnail
         this.mp3 = mp3
 
-        this.audio = document.createElement('audio')
+        this.audio = document.querySelector('.audio')
         this.playPauseBtn = document.querySelector('.play-pause-btn')
         this.durationBarElement = document.querySelector('.song-duration-bar')
         this.currentTimeNote = 0
@@ -21,6 +21,8 @@ export class Song
         this.playPauseBtn.innerHTML = '<i class="ri-pause-fill"></i>';
 
         this.updateTime();
+
+        this.finished();
     }
 
     pause()
@@ -28,7 +30,17 @@ export class Song
         this.audio.pause();
         this.playPauseBtn.innerHTML = '<i class="ri-play-fill"></i>';
     }
-    
+
+    // Event : Audio Berakhir
+    finished()
+    {
+        this.audio.addEventListener('ended', () => {
+            console.log('selesai');
+            this.audio.currentTime = 0;
+            this.pause();
+        })
+    }
+
     // Update Current Time Audio
     updateTime()
     {

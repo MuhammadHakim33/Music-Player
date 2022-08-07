@@ -1,8 +1,8 @@
 import { songs } from './listsongs.js';
 import { Song } from './Song.js';
 
-let classSong = null;
-let audio = false;
+let classSong;
+let isPlaying = true;
 
 // Display List Songs
 document.addEventListener('DOMContentLoaded', () => {
@@ -47,12 +47,15 @@ document.querySelector('.song-list')
 document.querySelector('.play-pause-btn')
         .addEventListener('click', () => {
 
-            if(audio == false) {
-                audio = true;
-                classSong.pause()
-            } else {
-                audio = false;
-                classSong.play();
+            switch (isPlaying) {
+                case true:
+                    classSong.pause();
+                    isPlaying = false;
+                    break;
+                case false:
+                    classSong.play();
+                    isPlaying = true;
+                    break;
             }
 })
 
@@ -65,9 +68,3 @@ document.querySelector('.close-player-btn')
 // Event : Change Duration
 document.querySelector('.song-duration-bar')
         .addEventListener('change', () => classSong.changeDuration());
-
-
-
-
-
-
