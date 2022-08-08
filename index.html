@@ -9,14 +9,22 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Music Player</title>
 </head>
-<body>
+<body class="text-bg-light">
 
-    <div class="container py-4">
+    <!-- Header -->
+    <div class="container">
+        <div class="header py-3 px-0">
+            <h2>Feel<br>Good<br>Tunes</h2>
+        </div>
+    </div>
+
+    <!-- Table List Songs -->
+    <div class="container p-3 bg-white mb-5 rounded-0">
         <table class="table align-middle table-hover">
             <thead>
                 <tr>
-                    <th scope="col" style="width: 20%">#</th>
-                    <th scope="col" style="width: 50%">Title</th>
+                    <th scope="col" style="width: 15%">#</th>
+                    <th scope="col" style="width: 55%">Title</th>
                     <th scope="col" style="width: 30%">Artist</th>
                 </tr>
             </thead>
@@ -36,15 +44,15 @@
                         <p class="song-artist mb-0">Artist</p>
                     </div>
                     <div class="wrapper flex-grow-1 mx-4 d-flex align-items-center">
-                        <audio class="audio" src=""></audio>
                         <input class="song-duration-bar w-100" type="range" value="0" min="0" class="range">
                     </div>
                     <div class="wrapper">
+                        <audio class="audio" src=""></audio>
                         <p class="song-duration mb-0 me-4">00:00</p>
                     </div>
-                    <div class="wrapper">
-                        <button class="play-pause-btn"></button>
-                        <button data-bs-dismiss="modal" class="close-player-btn"><i class="ri-close-fill"></i></button>
+                    <div class="wrapper d-flex">
+                        <button class="play-pause-btn btn btn-dark rounded-0 me-1"></button>
+                        <button data-bs-dismiss="modal" class="close-player-btn btn btn-outline-dark rounded-0"><i class="ri-close-fill"></i></button>
                     </div>
                 </div>
             </div>

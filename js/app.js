@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
         row.innerHTML = `
             <td><img src="${song.thumbnail}" class="img-thumbnail border-0 rounded-0 p-0" width="60"></td>
             <td><h6>${song.title}</h6></td>
-            <td><h6>${song.artist}</h6></td>
+            <td><p class="mb-0">${song.artist}</p></td>
             <div class="item-overlay"></div>
         `;
 

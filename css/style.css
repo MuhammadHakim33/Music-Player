@@ -2,6 +2,11 @@
     max-width: 800px;
 }
 
+.header h2,
+h6 {
+    font-weight: bold;
+}
+
 .item-overlay {
     height: 100%;
     width: 100%;
@@ -14,5 +19,30 @@
 .modal-dialog {
     position: relative;
     bottom: -75%;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    height: 7px;
+    background-color: rgba(0, 0, 0, .2);
+    border-radius: 10px;
+  }
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 10px;
+    width: 17px;
+    border-radius: 10px;
+    background: black;
+    cursor: ew-resize;
+}
+
+@media screen and (max-width: 576px) {
+    .wrapper:nth-child(2) {
+        display: none !important;
+    }
+
+    .modal-dialog {
+        bottom: -80%;
+    }
 }
 
